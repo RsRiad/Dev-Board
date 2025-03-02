@@ -130,14 +130,19 @@
         </div>
 
         <!-- Activity Log -->
+
         <div class="bg-white p-6 rounded-lg shadow-lg">
-            <h3 class="text-lg font-semibold flex items-center"><span class="mr-2">⏳</span>Activity Log</h3>
-            <button class="bg-blue-500 text-white px-4 py-1 mt-2 rounded">Clear History</button>
-            <div class="mt-4 space-y-2">
-                <p class="text-gray-500 text-sm bg-gray-100 p-2 rounded">You have completed the task "Add Dark Mode" at 12:48:15 PM</p>
-                <p class="text-gray-500 text-sm bg-gray-100 p-2 rounded">You have completed the task "Add Dark Mode" at 12:48:15 PM</p>
-            </div>
+            <h3 class="text-lg font-semibold flex items-center">
+                <span class="mr-2">⏳</span>Activity Log
+            </h3>
+            <button id="clear-history" class="bg-red-500 text-white px-4 py-1 mt-4 rounded ">
+                Clear History
+            </button>
+        
+            <div id="activity-log" class="mt-4 space-y-2"></div>
+            
         </div>
+        
     </div>
     </section>
     </main>

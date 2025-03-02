@@ -13,9 +13,8 @@ today.innerText = new Date().toLocaleDateString("en-US", { month: "short", day: 
 
 // completed
 const buttons = document.querySelectorAll(".completed-button");
-
 for (const button of buttons) {
-    button.addEventListener("click", () => {
+    button.addEventListener("click", (event) => {
         alert("Task marked as completed!");
         let first=document.getElementById("task-ass");;
         let remain=parseInt(first.innerText);
@@ -29,7 +28,23 @@ for (const button of buttons) {
         total+=1;
         final.innerHTML=total;
 
+        let taskName = button.closest('.bg-gray-100').querySelector('h2').innerText;
+        let currentTime = new Date().toLocaleTimeString();
+
+        let activityLog = document.getElementById("activity-log");
+        let logMessage = document.createElement("div");
+        logMessage.classList.add("p-2", "border-b", "border-gray-200");
+
+        logMessage.innerText = `You have completed the task "${taskName}" at ${currentTime}`;
+        activityLog.appendChild(logMessage);
+
         button.disabled = true;
         button.classList.add("bg-gray-400");
     });
 }
+
+// Clear History
+document.getElementById("clear-history").addEventListener("click", () => {
+    document.getElementById("activity-log").innerHTML = "";
+    
+});
