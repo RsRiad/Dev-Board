@@ -16,26 +16,29 @@
                     <h1 class="text-3xl">Dev<span class="font-bold">Board</span></h1>
                 </div>
                 <div class="">
-                    <button class="bg-blue-500 text-white px-4 py-1 mt-2 rounded completed-button"><a href="./index.html">Back to Desk</a></button>                
+                    <button id="back" class="bg-blue-500 text-white px-4 py-1 mt-2 rounded completed-button font-bold text-1xl pt-3 pb-3">Back to Desk</button>                
                 </div>
             </div>
         </section>
     </header>
     <main>
+        <h1 class="font-bold text-center mb-5 text-4xl">Blogs</h1>
         <section class="max-w-full mx-auto py-14 rounded-xl px-6 bg-white flex justify-center ">
+            
             <div class="join join-vertical bg-base-100 justify-center w-3/4 mx-auto py-4">
                 <div class="collapse collapse-arrow bg-base-100 border border-base-300">
                     <input type="radio" name="my-accordion-2" checked="checked" />
                     <div class="collapse-title font-semibold"> What are the different ways to select an element in the DOM?</div>
-                    <div class="collapse-content text-sm"><ul>
-                        <li>getElementById("id")</li>
-                        <li>getElementsByClassName("class")</li>
-                        <li>getElementsByTagName("tag")</li>
-                        <li>querySelector("selector")</li>
-                        <li>querySelectorAll("selector")</li>
-                        
-                    </ul></div>
-                  </div>
+                    <div class="collapse-content text-sm">
+                        <ul>
+                            <li>getElementById("id")</li>
+                            <li>getElementsByClassName("class")</li>
+                            <li>getElementsByTagName("tag")</li>
+                            <li>querySelector("selector")</li>
+                            <li>querySelectorAll("selector")</li>
+                        </ul>
+                    </div>
+                </div>
                   <div class="collapse collapse-arrow bg-base-100 border border-base-300">
                     <input type="radio" name="my-accordion-2" />
                     <div class="collapse-title font-semibold">What is the difference between innerHTML, innerText, and textContent ?</div>
@@ -72,5 +75,6 @@
         </section>
     </main>
     
+    <script src="./js/blogScript.js"></script>
 </body>
 </html>
